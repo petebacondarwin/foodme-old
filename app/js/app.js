@@ -1,4 +1,4 @@
-angular.module('foodMeApp', ['customer', 'navbar', 'restaurant'])
+angular.module('foodMeApp', ['customer', 'navbar', 'restaurant', 'menu'])
 
 .config(function($routeProvider) {
   $routeProvider

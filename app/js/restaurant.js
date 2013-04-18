@@ -1,4 +1,4 @@
-angular.module('restaurant', ['customer', 'ngResource', 'fmDeliverTo', 'fmRating', 'fmCheckboxList'])
+angular.module('restaurant', ['customer', 'ngResource', 'fmDeliverTo', 'fmRating', 'fmCheckboxList', 'menu'])
 
 .factory('Restaurant', function($resource) {
   return $resource('/api/restaurant/:id', { id: '@id'});
@@ -81,8 +81,4 @@ angular.module('restaurant', ['customer', 'ngResource', 'fmDeliverTo', 'fmRating
     }
     return $scope.sort.asc ? '\u25B2' : '\u25BC';
   };
-})
-
-.controller('MenuController', function MenuController($scope, $routeParams, Restaurant) {
-  $scope.restaurant = Restaurant.get({id: $routeParams.restaurantId});
 });
