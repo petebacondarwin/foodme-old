@@ -1,0 +1,12 @@
+/****************************************
+ * route specific css                   *
+ ****************************************/
+
+
+/* customer */
+
+.fm-customer-bkg {
+  background-image: url(../img/customer_bkg.jpg);
+  opacity: 0.4;
+  height: 705px;
+}
