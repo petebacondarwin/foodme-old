@@ -1,4 +1,4 @@
-angular.module('restaurant', ['customer','ngResource'])
+angular.module('restaurant', ['customer', 'ngResource'])
 
 .factory('Restaurant', function($resource) {
   return $resource('/api/restaurant/:id', { id: '@id'});
