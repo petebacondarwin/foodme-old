@@ -13,6 +13,6 @@ angular.module('restaurant', ['customer', 'ngResource', 'fmDeliverTo'])
   $scope.restaurants = Restaurant.query();
 })
 
-.controller('MenuController', function($scope) {
-  
+.controller('MenuController', function MenuController($scope, $routeParams, Restaurant) {
+  $scope.restaurant = Restaurant.get({id: $routeParams.restaurantId});
 });

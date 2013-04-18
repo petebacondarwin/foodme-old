@@ -3,7 +3,7 @@ describe('deliverTo directive', function() {
 
 
   // load template into $templateCache
-  beforeEach(module('app/js/fmDeliverTo/fmDeliverTo.template.html'));
+  beforeEach(module('js/fmDeliverTo/fmDeliverTo.template.html'));
 
   beforeEach(module(function($provide){
     customer = {};
