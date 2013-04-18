@@ -15,4 +15,11 @@ angular.module('customer', ['localStorage'])
   }, true);
 
   return customer;
+})
+
+.controller('CustomerController', function CustomerController($scope, customer) {
+  
+  $scope.findRestaurants = function(customerName, customerAddress) {
+    alert(customerName,customerAddress);
+  };
 });
