@@ -10,5 +10,6 @@ angular.module('restaurant', ['customer', 'ngResource'])
     $location.url('/customer');
   }
 
-  $scope.restaurants = Restaurant.query();  
+  $scope.restaurants = Restaurant.query();
+  $scope.customer = customer;
 });
