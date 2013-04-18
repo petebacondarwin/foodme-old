@@ -4,7 +4,7 @@ describe('foodme', function() {
 
   describe('customer', function() {
     beforeEach(function() {
-      browser().navigateTo('/index.html');
+      browser().navigateTo('/index.html#/customer');
     });
 
     it('should persist customer information', function() {
@@ -14,7 +14,7 @@ describe('foodme', function() {
       element(':button.btn-primary').click();
 
       // reload the page
-      browser().navigateTo('/index.html#/');
+      browser().navigateTo('/index.html#/customer');
 
       expect(input('customerName').val()).toEqual('Customer');
       expect(input('customerAddress').val()).toEqual('Address');
