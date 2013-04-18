@@ -1,7 +1,6 @@
 describe('customer model', function() {
   var customer, localStorage, $rootScope;
 
-  beforeEach(module('foodMeApp'));
   beforeEach(module(function($provide) {
     localStorage = {
       fmCustomer: '{"name":"init-name","address":"init-address"}'
