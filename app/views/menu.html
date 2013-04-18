@@ -13,8 +13,8 @@
       <div class="row">
         <div class="span2">
           <div>{{restaurant.address}}</div>
-          <div>{{restaurant.rating | stars}}</div>
-          <div>{{restaurant.price | dollars}}</div>          
+            <fm-rating rating="restaurant.rating" readonly="true"></fm-rating>
+            <fm-rating rating="restaurant.price" symbol="$" readonly="true"></fm-rating>
         </div>
         <div class="span4">
           <div>{{restaurant.description}}</div>
@@ -25,7 +25,7 @@
 </div>
 
 
-<div class="row-fluid">
+.<div class="row-fluid">
   <div class="span8 fm-panel fm-menu-list">
     <h4>Menu</h4>
     <ul>
