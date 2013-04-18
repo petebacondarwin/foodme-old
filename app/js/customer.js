@@ -18,8 +18,11 @@ angular.module('customer', ['localStorage'])
 })
 
 .controller('CustomerController', function CustomerController($scope, customer) {
-  
+  $scope.customerName = customer.name;
+  $scope.customerAddress = customer.address;
+
   $scope.findRestaurants = function(customerName, customerAddress) {
-    alert(customerName,customerAddress);
+    customer.name = customerName;
+    customer.address = customerAddress;
   };
 });
