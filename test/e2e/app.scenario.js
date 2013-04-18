@@ -68,6 +68,15 @@ describe('foodme', function() {
     });
   });
 
+  describe('menus', function() {
+    beforeEach(function() {
+      browser().navigateTo('/index.html#/menu/angular');
+    });
+    it('should show the angular menu', function() {
+      expect(element('.fm-restaurant h3').text()).toMatch('Angular Pizza');
+    });
+  });
+
   describe('fmDeliverTo', function() {
     beforeEach(function() {
       browser().navigateTo('/index.html#/customer');
