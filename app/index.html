@@ -10,17 +10,17 @@
 
 <div class="container">
 
-  <div class="navbar">
+  <div class="navbar" ng-controller="NavbarController">
     <div class="navbar-inner">
       <a class="brand" href="#/">FoodMe</a>
       <ul class="nav">
-        <li class="active"><a href="#/">Home</a></li>
-        <li><a href="#/how-it-works">How it works</a></li>
-        <li><a href="#/who-we-are">Who we are</a></li>
+        <li ng-class="{active: routeIs('/')}"><a href="#/">Home</a></li>
+        <li ng-class="{active: routeIs('/how-it-works')}"><a href="#/how-it-works">How it works</a></li>
+        <li ng-class="{active: routeIs('/who-we-are')}"><a href="#/who-we-are">Who we are</a></li>
       </ul>
 
       <ul class="nav pull-right">
-        <li><a href="#/help">Help</a></li>
+        <li ng-class="{active: routeIs('/help')}"><a href="#/help">Help</a></li>
       </ul>
     </div>
   </div>
@@ -33,6 +33,7 @@
 <script src="js/app.js"></script>
 <script src="js/customer.js"></script>
 <script src="js/localstorage.js"></script>
+<script src="js/navbar.js"></script>
 
 </body>
 </html>
