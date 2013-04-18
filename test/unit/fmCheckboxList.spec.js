@@ -42,7 +42,6 @@ describe('fmCheckboxList directive', function() {
     scope.$apply(function() {
       scope.filter.cuisine = ['a', 'b'];
     });
-
     expect(inputs.eq(0).prop('checked')).toBe(true);
     expect(inputs.eq(1).prop('checked')).toBe(true);
     expect(inputs.eq(2).prop('checked')).toBe(false);
