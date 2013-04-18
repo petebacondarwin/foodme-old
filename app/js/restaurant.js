@@ -12,4 +12,8 @@ angular.module('restaurant', ['customer', 'ngResource'])
 
   $scope.restaurants = Restaurant.query();
   $scope.customer = customer;
+})
+
+.controller('MenuController', function($scope) {
+  
 });

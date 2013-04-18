@@ -6,6 +6,10 @@ angular.module('foodMeApp', ['customer', 'navbar', 'restaurant'])
       controller: 'RestaurantsController',
       templateUrl: 'views/restaurants.html'
     })
+    .when('/menu/:restaurantId', {
+      controller: 'MenuController',
+      templateUrl: 'views/menu.html'
+    })
     .when('/customer', {
       controller: 'CustomerController',
       templateUrl: 'views/customer.html'
