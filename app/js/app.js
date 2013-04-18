@@ -1,4 +1,4 @@
-angular.module('foodMeApp', ['customer', 'navbar', 'restaurant', 'menu'])
+angular.module('foodMeApp', ['customer', 'navbar', 'restaurant', 'menu', 'checkout'])
 
 .config(function($routeProvider) {
   $routeProvider
@@ -10,8 +10,12 @@ angular.module('foodMeApp', ['customer', 'navbar', 'restaurant', 'menu'])
       controller: 'MenuController',
       templateUrl: 'views/menu.html'
     })
+    .when('/checkout', {
+        controller: 'CheckoutController',
+        templateUrl: 'views/checkout.html'
+    })
     .when('/customer', {
-      controller: 'CustomerController',
+     controller: 'CustomerController',
       templateUrl: 'views/customer.html'
     })
     .when('/who-we-are', {
