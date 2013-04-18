@@ -1,13 +1,14 @@
-angular.module('restaurant', ['customer'])
+angular.module('restaurant', ['customer','ngResource'])
 
-.controller('RestaurantsController', function RestaurantsController($scope, customer, $location, $http) {
+.factory('Restaurant', function($resource) {
+  return $resource('/api/restaurant/:id', { id: '@id'});
+})
+
+.controller('RestaurantsController', function RestaurantsController($scope, customer, $location, Restaurant) {
 
   if (!customer.address) {
     $location.url('/customer');
   }
 
-  $http.get('/api/restaurant').then(function(response) {
-    $scope.restaurants = response.data;
-  });
-
+  $scope.restaurants = Restaurant.query();  
 });
