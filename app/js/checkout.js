@@ -17,4 +17,8 @@ angular.module('checkout', [])
     });
   };
 
+})
+
+.controller('ThankYouController', function($scope) {
+
 });

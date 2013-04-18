@@ -11,11 +11,15 @@ angular.module('foodMeApp', ['customer', 'navbar', 'restaurant', 'menu', 'checko
       templateUrl: 'views/menu.html'
     })
     .when('/checkout', {
-        controller: 'CheckoutController',
-        templateUrl: 'views/checkout.html'
+      controller: 'CheckoutController',
+      templateUrl: 'views/checkout.html'
+    })
+    .when('/thank-you', {
+      controller: 'ThankYouController',
+      templateUrl: 'views/thank-you.html'
     })
     .when('/customer', {
-     controller: 'CustomerController',
+      controller: 'CustomerController',
       templateUrl: 'views/customer.html'
     })
     .when('/who-we-are', {
