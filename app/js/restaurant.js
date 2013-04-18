@@ -1,4 +1,4 @@
-angular.module('restaurant', ['customer', 'ngResource'])
+angular.module('restaurant', ['customer', 'ngResource', 'fmDeliverTo'])
 
 .factory('Restaurant', function($resource) {
   return $resource('/api/restaurant/:id', { id: '@id'});
@@ -11,7 +11,6 @@ angular.module('restaurant', ['customer', 'ngResource'])
   }
 
   $scope.restaurants = Restaurant.query();
-  $scope.customer = customer;
 })
 
 .controller('MenuController', function($scope) {
