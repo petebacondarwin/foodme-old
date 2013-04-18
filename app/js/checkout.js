@@ -19,6 +19,6 @@ angular.module('checkout', [])
 
 })
 
-.controller('ThankYouController', function($scope) {
-
+.controller('ThankYouController', function($scope, $routeParams) {
+  $scope.orderId = $routeParams.orderId;
 });
